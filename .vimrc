@@ -56,7 +56,7 @@ call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'powerline/powerline'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -64,9 +64,6 @@ call plug#end()
 map <C-p> :Files <cr>
 map <C-l> :Buffers <cr>
 
-" Powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-
 set laststatus=2
+
+let g:airline#extensions#tabline#enabled = 1
