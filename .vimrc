@@ -17,7 +17,7 @@ set lbr
 set tw=500
 set ai
 set si
-set wrap
+set wrap!
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 set laststatus=2
@@ -62,8 +62,10 @@ Plug 'preservim/nerdtree'
 call plug#end()
 
 " Maps
-map <C-p> :Files <cr>
-map <C-l> :Buffers <cr>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-l> :Buffers<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
 
 set laststatus=2
 
